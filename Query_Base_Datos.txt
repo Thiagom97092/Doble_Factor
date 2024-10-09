@@ -1,0 +1,12 @@
+CREATE DATABASE doble_factor_autenticacion;
+
+USE doble_factor_autenticacion;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    2fa_secret VARCHAR(255) DEFAULT NULL,
+    2fa_enabled BOOLEAN DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
