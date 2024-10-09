@@ -28,11 +28,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    <?php include '../templates/nav.php'?>
+    <div class="container mt-5">
+        <div class="row justify-content-md-center">
+            <div class="col col-md-6">
+                <!-- Formulario para ingresar el código 2FA -->
+                <h2>Verificar Código de Autenticación de Google</h2>
+                <form method="POST">
+                    <label for="2fa_code">Código:</label>
+                    <input type="text" id="2fa_code" name="2fa_code" required>
+                    <button type="submit">Verificar</button>
+                </form>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>
 
-<!-- Formulario para ingresar el código 2FA -->
-<h2>Verificar Código de Autenticación de Google</h2>
-<form method="POST">
-    <label for="2fa_code">Código:</label>
-    <input type="text" id="2fa_code" name="2fa_code" required>
-    <button type="submit">Verificar</button>
-</form>
+
+
+
+
